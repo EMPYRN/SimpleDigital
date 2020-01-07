@@ -1,0 +1,41 @@
+{
+    "name": "simple-digital",
+    "version": "0.2.1",
+    "fitbit": {
+        "appUUID": "a2573b74-3ab8-4d91-9ed3-cfcb9f02810d",
+        "appType": "clockface",
+        "appDisplayName": "Simple Digital",
+        "iconFile": "resources/icon.png",
+        "wipeColor": "#ffffff",
+        "requestedPermissions": [
+            "access_activity",
+            "access_heart_rate",
+            "access_user_profile",
+            "access_internet"
+        ],
+        "buildTargets": [
+            "meson",
+            "gemini",
+            "higgs",
+            "mira"
+        ],
+        "i18n": {
+            "en": {
+                "name": "Simple Digital"
+            }
+        },
+        "defaultLanguage": "en-US"
+    },
+    "devDependencies": {
+        "@fitbit/sdk": "~4.1.0",
+        "@fitbit/sdk-cli": "^1.7.1"
+    },
+    "dependencies": {
+        "fp-ts": "^2.3.1",
+        "io-ts": "^2.0.3"
+    },
+    "scripts": {
+        "build": "fitbit-build"
+    },
+    "private": true
+}

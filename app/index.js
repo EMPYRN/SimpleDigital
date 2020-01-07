@@ -1,3 +1,43 @@
+/**** BEGIN KPAY IMPORTS - REQUIRED ****/
+/*
+ * If you want (a lot of) logging from the KPay library,
+ * replace "release" with "debug" in the import paths for
+ * ALL KPAY IMPORTS below
+ *    ==> DO NOT MIX RELEASE AND DEBUG IMPORTS!
+ */
+// required imports
+import * as kpay from './kpay/release/kpay.js';
+import * as kpay_common from '../common/kpay/kpay_common.js';
+
+/* Choose which type of "companion => phone communications" you want to use:
+ *   - file transfer: is more reliable, uses more memory
+ *          ==> import './kpay/release/kpay_filetransfer.js';
+ *   - normal messaging: less reliable then file transfer, might cause frustration with the user if messaging fails, but uses less memory
+ *          ==> import './kpay/release/kpay_messaging.js';
+ * If you do not run into memory issues with your app or clockface, we recommend you use the file transfer communications
+ */
+import './kpay/release/kpay_filetransfer.js';
+//import './kpay/release/kpay_messaging.js';
+
+// optional imports, remove if not needed to save memory
+import './kpay/release/kpay_dialogs.js';			// remove if you handle KPay dialogs yourself
+
+// remove this is you want to choose yourself when the purchase starts,
+// leave it in if you want the purchase to start automatically (either after a long trial or immediately at startup of the app)
+// If you want the purchase to start immediately after install, just set the trial time to 0 in the product settings in your kpay account
+import './kpay/release/kpay_time_trial.js';
+
+/*
+ * Removing the import below can save up to 8.5kb of extra memory.
+ *
+ * BEWARE: Only do this when you really need that extra memory and cannot get it by optimizing your own code!
+ * Removing this import will disable the message checksum validation, which means the KPay lib
+ * can no longer detect if the messages received from the KPay server are tampered with.
+ * Eventhough the risk of your app being cracked are very small, removing this import makes it a possibility!
+ */
+import './kpay/release/kpay_msg_validation.js';			// remove if you need extra memory and are willing to take the risk described above
+/**** END KPAY IMPORTS ****/
+
 import clock from "clock";
 import document from "document";
 import { preferences } from "user-settings";
@@ -14,6 +54,9 @@ import { HeartRateSensor } from "heart-rate";
 import { vibration } from "haptics";
 import userActivity from "user-activity";
 import { geolocation } from "geolocation";
+
+// K-Pay Init
+kpay.initialize();
 
 // Text Items
 const main = document.getElementById("time");

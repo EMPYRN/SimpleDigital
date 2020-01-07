@@ -36,4 +36,8 @@
     <image id="calsIcon" class="statIcon" x="100%-20" y="100%-20" href="icons/stat_cals_open_48px.png" />
     <text id="calsText" class="statText" x="100%-25" y="100%-2" text-anchor="end" />
   </section>
+
+  <!--ADD CODE ABOVE THIS LINE-->
+  <!--Use K-Pay UI Code-->
+  <use href="#kpay" />
 </svg>
