@@ -1,43 +1,56 @@
 <!-- SVG Parent -->
-<svg id="background" class="background" pointer-events="visible">
-  <!-- Battery & Heart-Rate -->
-  <section id="indcContainer">
-    <image id="battIcon" class="indcIcon" height="30" width="30" x="0%" y="0%-5" href="icons/battery_indc_100_48px.png" />
-    <text id="battText" x="0%+35" y="0%+17" />
+<svg class="screen">
+    <defs>
+        <link rel="stylesheet" href="common.css" />
+        <link rel="stylesheet" href="styles.css" />
+    </defs>
 
-    <image id="hrIcon" class="indcIcon" x="100%-20" y="0%" href="icons/stat_hr_solid_48px.png" />
-    <text id="hrText" x="100%-25" y="0%+17" text-anchor="end" />
-  </section>
+    <!-- Battery & Heart Rate -->
+    <svg id="indicator-section">
+        <!--Battery-->
+        <image id="battery-icon" class="indicator-icon" href="icons/battery_indc_100_48px.png" />
+        <text id="battery-text" class="indicator-text" />
+        <!--Heart Rate-->
+        <image id="heart-rate-icon" class="indicator-icon" href="icons/stat_hr_solid_48px.png"/>
+        <text id="heart-rate-text" class="indicator-text" />
+    </svg>
 
-  <!-- Main Clock -->
-  <section id="clockContainer">
-    <text id="date" x="50%" y="0%+20" text-anchor="middle" />
-    <text id="time" x="50%" y="100%" text-anchor="middle" />
-  </section>
+    <!-- Date & Time -->
+    <svg id="date-section">
+        <text id="date-text" class="date" />
+    </svg>
+    <svg id="time-section">
+        <text id="time-text" class="time" />
+    </svg>
 
-  <!-- Time Line -->
-  <section id="timelineContainer">
-    <line id="emptyTimeline" class="timeline" fill="grey" stroke-width="1" />
-    <line id="fullTimeline" class="timeline" stroke-width="2" />
-  </section>
+    <!-- Timeline -->
+    <svg id="timeline-section">
+        <line id="timeline-empty" class="timeline" />
+        <svg x="3%" y="0" width="94%" height="100%">
+            <g id="timeline-animation">
+                <line id="timeline-full" class="timeline"/>
+            </g>
+        </svg>
+    </svg>
 
-  <!-- Stat Information -->
-  <section id="statContainer">
-    <image id="floorsIcon" class="statIcon" x="0%" y="0%" href="icons/stat_floors_open_48px.png" />
-    <text id="floorsText" class="statText" x="0%+25" y="0%+17" text-anchor="start" />
-    <image id="distIcon" class="statIcon" x="0%" y="100%-20" href="icons/stat_dist_open_48px.png" />
-    <text id="distText" class="statText" x="0%+25" y="100%-2" text-anchor="start" />
+    <!-- Fitbit Stats -->
+    <svg id="stat-section">
+        <!--Left column-->
+        <image id="floors-icon" class="stat-icon" href="icons/stat_floors_open_48px.png" />
+        <text id="floors-text" class="stat-text" />
+        <image id="distance-icon" class="stat-icon" href="icons/stat_dist_open_48px.png" />
+        <text id="distance-text" class="stat-text" />
+        <!--Middle column-->
+        <image id="steps-icon" class="stat-icon" href="icons/stat_steps_open_48px.png" />
+        <text id="steps-text" class="stat-text" />
+        <!--Right column-->
+        <image id="minutes-icon" class="stat-icon" href="icons/stat_am_open_48px.png" />
+        <text id="minutes-text" class="stat-text" />
+        <image id="calories-icon" class="stat-icon" href="icons/stat_cals_open_48px.png" />
+        <text id="calories-text" class="stat-text" />
+    </svg>
 
-    <image id="stepsIcon" class="statIcon" x="50%-10" y="100%-20" href="icons/stat_steps_open_48px.png"/>
-    <text id="stepsText" class="statText" x="50%" y="0%+17" text-anchor="middle" />
-
-    <image id="amIcon" class="statIcon" x="100%-20" y="0%" href="icons/stat_am_open_48px.png" />
-    <text id="amText" class="statText" x="100%-25" y="0%+17" text-anchor="end" />
-    <image id="calsIcon" class="statIcon" x="100%-20" y="100%-20" href="icons/stat_cals_open_48px.png" />
-    <text id="calsText" class="statText" x="100%-25" y="100%-2" text-anchor="end" />
-  </section>
-
-  <!--ADD CODE ABOVE THIS LINE-->
-  <!--Use K-Pay UI Code-->
-  <use href="#kpay" />
+    <!--ADD CODE ABOVE THIS LINE-->
+    <!--Use K-Pay UI Code-->
+    <use href="#kpay" />
 </svg>

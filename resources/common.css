@@ -1,0 +1,206 @@
+/**
+    $ -> end of previous element
+*/
+
+.screen
+{
+    height: 100%;
+    width: 100%;
+    viewport-fill: #000000;
+}
+
+text
+{
+    font-family: Fabrikat-Bold;
+    font-size: 24;
+    fill: #ffffff;
+    text-length: 20;
+}
+
+#indicator-section
+{
+    height: 26%;
+    width: 100%;
+    x: 0;
+    y: 0;
+}
+
+#date-section
+{
+    height: 12%;
+    width: 100%;
+    x: 0;
+    y: 26%;
+}
+
+#time-section
+{
+    height: 24%;
+    width: 100%;
+    x: 0;
+    y: 38%;
+}
+
+#timeline-section
+{
+    height: 12%;
+    width: 100%;
+    x: 0;
+    y: 62%;
+}
+
+#stat-section
+{
+    height: 26%;
+    width: 100%;
+    x: 0; 
+    y: 74%;
+}
+
+.indicator-icon
+{
+    height: 32;
+    width: 32;
+    fill: #ffffff;
+}
+
+.stat-icon
+{
+    height: 32;
+    width: 32;
+    fill: #ffffff;
+}
+
+#battery-icon
+{
+    x: 3%;
+    y: 5%;
+}
+
+#battery-text
+{
+    x: 16%;
+    y: 26;
+}
+
+#heart-rate-icon
+{
+    x: 97%-32;
+    y: 5%;
+}
+
+#heart-rate-text
+{
+    x: 84%;
+    y: 26;
+    text-anchor: end;
+}
+
+#date-text
+{
+    x: 50%;
+    y: 50%;
+    font-size: 26;
+    text-anchor: middle;
+}
+
+#time-text
+{
+    x: 50%;
+    y: 100%-6;
+    font-size: 82;
+    text-anchor: middle;
+}
+
+/* Timeline */
+
+#timeline-empty
+{
+    fill: #555555;
+    stroke-width: 1;
+}
+
+#timeline-full
+{
+    fill: #ffffff;
+    stroke-width: 3;
+    x1: 0%;
+    y1: 50%;
+
+    x2: 100%;
+    y2: 50%;
+}
+
+.timeline
+{
+    x1: 3%;
+    y1: 50%;
+
+    x2: 97%;
+    y2: 50%;
+}
+
+/** Stat Icons **/
+
+#floors-icon
+{
+    x: 3%;
+    y: 5%;
+}
+
+#floors-text
+{
+    x: 5%+32;
+    y: 5%+24;
+}
+
+#distance-icon
+{
+    x: 3%;
+    y: 95%-32;
+}
+
+#distance-text
+{
+    x: 5%+32;
+    y: 95%-8;
+}
+
+#steps-icon
+{
+    x: 50%-16;
+    y: 95%-32;
+}
+
+#steps-text
+{
+    x: 50%;
+    y: 5%+24;
+    text-anchor: middle;
+}
+
+#minutes-icon
+{
+    x: 97%-32;
+    y: 5%;
+}
+
+#minutes-text
+{
+    x: 95%-32;
+    y: 5%+24;
+    text-anchor: end;
+}
+
+#calories-icon
+{
+    x: 97%-32;
+    y: 95%-32;
+}
+
+#calories-text
+{
+    x: 95%-32;
+    y: 95%-8;
+    text-anchor: end;
+}

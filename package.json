@@ -2,7 +2,7 @@
     "name": "simple-digital",
     "version": "0.2.1",
     "fitbit": {
-        "appUUID": "a2573b74-3ab8-4d91-9ed3-cfcb9f02810d",
+        "appUUID": "bdb0de06-dfb7-4487-8f8d-85388ba6a1a6",
         "appType": "clockface",
         "appDisplayName": "Simple Digital",
         "iconFile": "resources/icon.png",
@@ -10,7 +10,6 @@
         "requestedPermissions": [
             "access_activity",
             "access_heart_rate",
-            "access_user_profile",
             "access_internet"
         ],
         "buildTargets": [

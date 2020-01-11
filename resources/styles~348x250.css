@@ -1,0 +1,31 @@
+/** IONIC **/
+
+#indicator-section
+{
+    height: 20%;
+    y: 0;
+}
+
+#date-section
+{
+    height: 18%;
+    y: 20%;
+}
+
+#time-section
+{
+    height: 24%;
+    y: 38%;
+}
+
+#timeline-section
+{
+    height: 8%;
+    y: 62%;
+}
+
+#stat-section
+{
+    height: 30%;
+    y: 70%;
+}
